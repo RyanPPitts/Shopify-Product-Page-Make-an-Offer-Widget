@@ -8,7 +8,7 @@ Boost conversions by offering a 10% discount in exchange for a customer's email.
 
 1. A hidden widget is revealed to the customer when the page loads.
 2. The customer enters their email and clicks **Give Me My Discount**.
-3. A 10% discount code appears and is applied at checkout after a short delay.
+3. A 10% discount code appears and is applied at checkout after a short delay. Make sure to create the discount code and assign to the discount code variable in the code below.
 4. The email is optionally sent to your backend (for mailing list, Klaviyo, etc.).
 5. The widget is remembered using `localStorage`, so it doesn't reappear.
 
