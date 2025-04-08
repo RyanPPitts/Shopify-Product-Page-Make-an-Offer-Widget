@@ -1,12 +1,40 @@
 # Shopify Product Page Make an Offer Widget
  
+## 🎁 Email Discount Widget – Liquid, HTML & CSS
+
+Use this snippet to render a discount widget that collects emails and applies a 10% coupon at checkout.
+
+```liquid
+{% render 'email-discount-widget' %}
+
+
+<div id="email-discount-widget" class="email-discount-widget" style="display: none;">
+  <div class="discount-card">
+    <p class="discount-headline"><strong>Get a 10% discount now !!</strong></p>
+    <p class="discount-subtext">Enter your email to see your discount now.</p>
+    <div class="discount-form">
+      <input
+        type="email"
+        id="discount-email"
+        class="discount-input"
+        placeholder="Enter your email"
+        required
+      >
+      <button type="button" id="get-discount-btn" class="discount-button">
+        Give Me My Discount
+      </button>
+    </div>
+    <p id="discount-message" class="discount-message"></p>
+  </div>
+</div>
+
+<p id="discount-reminder" class="discount-reminder" style="display: none; margin-top: 1rem;">
+  ✅ Don’t forget to use your 10% coupon code at checkout! Check your email or checkout now to see your discount.
+</p>
+
 
  On the main product liquid file you can insert the js file below or add as a sourced file from the assets folder
  
- ## 💸 Make an Offer Widget – JavaScript Code
-
-Copy and paste the code below into your Shopify theme or custom app.
-
 ```javascript
 <script>
   // Wait for the full page to load before running this script
