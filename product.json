@@ -1,0 +1,131 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+ {
+    "sections": {
+      "main": {
+        "type": "main-product",
+        "blocks": {
+          "title": {
+            "type": "title",
+            "settings": {}
+          },
+          "price": {
+            "type": "price",
+            "settings": {}
+          },
+          "variant_picker": {
+            "type": "variant_picker",
+            "settings": {
+              "picker_type": "button",
+              "swatch_shape": "square"
+            }
+          },
+          "quantity_selector": {
+            "type": "quantity_selector",
+            "settings": {}
+          },
+          "buy_buttons": {
+            "type": "buy_buttons",
+            "settings": {
+              "show_dynamic_checkout": false,
+              "show_gift_card_recipient": false
+            }
+          },
+          "email_discount_3fFTUU": {
+            "type": "email_discount",
+            "settings": {
+              "headline": "Save 10% Right Now",
+              "placeholder": "Enter your email",
+              "button_text": "Get 10% Discount Now",
+              "discount_code": "test"
+            }
+          },
+          "offer_widget_6dKBX6": {
+            "type": "offer_widget",
+            "settings": {
+              "button_text": "💬 Make an Offer",
+              "button_color": "#f2542d",
+              "button_text_color": "#f5f5f5",
+              "form_bg": "#f2542d",
+              "widget_width": "100%",
+              "label_offer_price": "Offer Price ($):",
+              "label_name": "Your Name:",
+              "label_email": "Your Email:",
+              "submit_button_text": "Submit Offer",
+              "submit_button_color": "#f2542d",
+              "submit_button_text_color": "#ffffff",
+              "success_message": "Thanks! We’ll get back to you in under 1 hour"
+            }
+          },
+          "description": {
+            "type": "description",
+            "settings": {}
+          },
+          "share": {
+            "type": "share",
+            "disabled": true,
+            "settings": {
+              "share_label": "Share"
+            }
+          }
+        },
+        "block_order": [
+          "title",
+          "price",
+          "variant_picker",
+          "quantity_selector",
+          "buy_buttons",
+          "email_discount_3fFTUU",
+          "offer_widget_6dKBX6",
+          "description",
+          "share"
+        ],
+        "settings": {
+          "enable_sticky_info": false,
+          "color_scheme": "scheme-1",
+          "media_size": "small",
+          "constrain_to_viewport": false,
+          "media_fit": "cover",
+          "gallery_layout": "thumbnail_slider",
+          "mobile_thumbnails": "show",
+          "media_position": "left",
+          "image_zoom": "none",
+          "hide_variants": false,
+          "enable_video_looping": false,
+          "padding_top": 12,
+          "padding_bottom": 12
+        }
+      },
+      "related-products": {
+        "type": "related-products",
+        "disabled": true,
+        "settings": {
+          "heading": "You may also like",
+          "heading_size": "h1",
+          "products_to_show": 4,
+          "columns_desktop": 3,
+          "columns_mobile": "2",
+          "color_scheme": "scheme-1",
+          "image_ratio": "square",
+          "image_shape": "default",
+          "show_secondary_image": true,
+          "show_vendor": false,
+          "show_rating": false,
+          "padding_top": 20,
+          "padding_bottom": 20
+        }
+      }
+    },
+    "order": [
+      "main",
+      "related-products"
+    ]
+  }
+  

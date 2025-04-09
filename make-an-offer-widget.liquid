@@ -1,0 +1,74 @@
+<div id="price-offer-widget"
+    style="margin-top: 1rem; background: {{ block.settings.form_bg }}; padding: 1rem; width: {{ block.settings.widget_width }};">
+    <button id="open-offer-form" type="button" style="
+      padding: 10px 15px;
+      background: {{ block.settings.button_color }};
+      color: {{ block.settings.button_text_color }};
+      border: none;
+      cursor: pointer;
+    ">
+        {{ block.settings.button_text }}
+    </button>
+
+    <div id="offer-form-popup" style="display:none; margin-top: 1rem; border: 1px solid #ccc; padding: 1rem;">
+        <form id="price-offer-form">
+            <label>{{ block.settings.label_offer_price }}</label><br>
+            <input type="number" name="offer_price" required style="width: 100%; margin-bottom: 10px;"><br>
+
+            <label>{{ block.settings.label_name }}</label><br>
+            <input type="text" name="name" style="width: 100%; margin-bottom: 10px;"><br>
+
+            <label>{{ block.settings.label_email }}</label><br>
+            <input type="email" name="email" required style="width: 100%; margin-bottom: 10px;"><br>
+
+            <input type="hidden" name="product_title" value="{{ product.title }}">
+            <input type="hidden" name="product_url" value="{{ shop.url }}{{ product.url }}">
+
+            <button type="submit"
+                style="background: {{ block.settings.submit_button_color }}; color: {{ block.settings.submit_button_text_color }}; border: none; padding: 10px 15px;">
+                {{ block.settings.submit_button_text }}
+            </button>
+        </form>
+        <div id="offer-form-success" style="display:none; color: green; margin-top: 10px;">
+            {{ block.settings.success_message }}
+        </div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const offerBtn = document.getElementById("open-offer-form");
+        const offerPopup = document.getElementById("offer-form-popup");
+        const offerForm = document.getElementById("price-offer-form");
+        const offerSuccess = document.getElementById("offer-form-success");
+
+        if (offerBtn) {
+            offerBtn.addEventListener("click", function () {
+                offerPopup.style.display = offerPopup.style.display === "none" ? "block" : "none";
+            });
+        }
+
+        if (offerForm) {
+            offerForm.addEventListener("submit", function (e) {
+                e.preventDefault();
+
+                const formData = new FormData(offerForm);
+
+                fetch("https://formspree.io/f/YOUR_FORM_ID", {
+                    method: "POST",
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                }).then(response => {
+                    if (response.ok) {
+                        offerForm.style.display = "none";
+                        offerSuccess.style.display = "block";
+                    } else {
+                        alert("Something went wrong. Please try again.");
+                    }
+                });
+            });
+        }
+    });
+</script>
